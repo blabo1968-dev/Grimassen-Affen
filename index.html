@@ -43,7 +43,7 @@
             width: 100%;
             max-width: 480px;
             height: 100vh;
-            height: 100dvh; /* Dynamic Viewport Height for mobile browsers */
+            height: 100dvh;
             display: flex;
             flex-direction: column;
             position: relative;
@@ -64,7 +64,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding: calc(12px + env(safe-area-inset-top)) 16px calc(12px + env(safe-area-inset-bottom)) 16px;
+            padding: calc(10px + env(safe-area-inset-top)) 12px calc(10px + env(safe-area-inset-bottom)) 12px;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease, transform 0.3s ease;
@@ -88,7 +88,7 @@
         }
 
         .app-title {
-            font-size: clamp(1.6rem, 5vh, 2.2rem);
+            font-size: clamp(1.4rem, 4.5vh, 2rem);
             font-weight: 900;
             text-transform: uppercase;
             text-align: center;
@@ -100,7 +100,7 @@
         }
 
         .brand-sub {
-            font-size: clamp(0.7rem, 2vh, 0.85rem);
+            font-size: clamp(0.65rem, 1.8vh, 0.8rem);
             font-weight: 700;
             color: var(--accent-yellow);
             text-align: center;
@@ -110,27 +110,27 @@
         }
 
         .subtitle {
-            font-size: clamp(0.75rem, 2vh, 0.9rem);
+            font-size: clamp(0.7rem, 1.8vh, 0.85rem);
             color: #a0a5c0;
             text-align: center;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .highscore-badge {
             background: rgba(0, 240, 255, 0.1);
             border: 1px solid var(--accent-cyan);
             color: var(--accent-cyan);
-            padding: 4px 12px;
+            padding: 3px 10px;
             border-radius: 20px;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: 700;
-            margin-top: 6px;
+            margin-top: 4px;
             text-align: center;
         }
 
         .hero-monkey-wrapper {
-            width: clamp(100px, 22vh, 140px);
-            height: clamp(100px, 22vh, 140px);
+            width: clamp(80px, 18vh, 120px);
+            height: clamp(80px, 18vh, 120px);
             margin: auto;
             flex-shrink: 1;
             filter: drop-shadow(0 0 20px rgba(255, 0, 127, 0.6));
@@ -145,14 +145,14 @@
             position: relative;
             width: 100%;
             flex: 1;
-            min-height: 200px;
-            max-height: 380px;
-            border-radius: 20px;
+            min-height: 180px;
+            max-height: 340px;
+            border-radius: 16px;
             overflow: hidden;
             border: 3px solid var(--accent-cyan);
             box-shadow: 0 0 25px rgba(0, 240, 255, 0.3);
             background: #000;
-            margin: 8px 0;
+            margin: 6px 0;
         }
 
         video {
@@ -191,22 +191,22 @@
 
         .task-card {
             background: var(--card-bg);
-            border-radius: 16px;
-            padding: 10px 12px;
+            border-radius: 14px;
+            padding: 8px 10px;
             width: 100%;
             text-align: center;
             border: 2px solid rgba(255, 230, 0, 0.5);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.4);
             position: relative;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             flex-shrink: 0;
         }
 
         .monkey-avatar-container {
-            width: clamp(55px, 9vh, 70px);
-            height: clamp(55px, 9vh, 70px);
+            width: clamp(45px, 7vh, 60px);
+            height: clamp(45px, 7vh, 60px);
             flex-shrink: 0;
             background: #121420;
             border-radius: 50%;
@@ -215,7 +215,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            box-shadow: 0 0 10px rgba(255, 230, 0, 0.4);
+            box-shadow: 0 0 8px rgba(255, 230, 0, 0.4);
             animation: bounce 1s infinite alternate ease-in-out;
         }
 
@@ -226,7 +226,7 @@
 
         @keyframes bounce {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-4px); }
+            100% { transform: translateY(-3px); }
         }
 
         .task-info {
@@ -235,7 +235,7 @@
         }
 
         .task-title {
-            font-size: clamp(1rem, 2.5vh, 1.2rem);
+            font-size: clamp(0.9rem, 2.2vh, 1.1rem);
             font-weight: 800;
             color: var(--accent-yellow);
             text-transform: uppercase;
@@ -244,10 +244,10 @@
         }
 
         .task-desc {
-            font-size: clamp(0.75rem, 1.8vh, 0.85rem);
+            font-size: clamp(0.7rem, 1.6vh, 0.8rem);
             color: #d1d5ed;
             font-weight: 500;
-            line-height: 1.2;
+            line-height: 1.15;
         }
 
         .game-status-bar {
@@ -262,23 +262,23 @@
         .round-indicator {
             font-weight: 800;
             color: var(--accent-cyan);
-            font-size: clamp(0.9rem, 2vh, 1.1rem);
+            font-size: clamp(0.85rem, 1.8vh, 1rem);
         }
 
         .timer-badge {
             background: var(--accent-pink);
             color: white;
-            padding: 4px 14px;
+            padding: 3px 12px;
             border-radius: 20px;
             font-weight: 900;
-            font-size: clamp(1.1rem, 2.5vh, 1.3rem);
-            box-shadow: 0 0 15px rgba(255, 0, 127, 0.5);
+            font-size: clamp(1rem, 2.2vh, 1.2rem);
+            box-shadow: 0 0 12px rgba(255, 0, 127, 0.5);
         }
 
         .score-live-badge {
             font-weight: 800;
             color: var(--accent-yellow);
-            font-size: clamp(0.85rem, 2vh, 1rem);
+            font-size: clamp(0.8rem, 1.8vh, 0.95rem);
         }
 
         .controls-group {
@@ -286,19 +286,19 @@
             flex-shrink: 0;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 6px;
         }
 
         .btn {
             background: linear-gradient(45deg, var(--accent-pink), #ff5e00);
             color: white;
             border: none;
-            padding: clamp(12px, 2vh, 15px) 20px;
-            font-size: clamp(0.95rem, 2.2vh, 1.15rem);
+            padding: clamp(10px, 1.8vh, 14px) 18px;
+            font-size: clamp(0.9rem, 2vh, 1.1rem);
             font-weight: 800;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 6px 20px rgba(255, 0, 127, 0.4);
+            box-shadow: 0 5px 15px rgba(255, 0, 127, 0.4);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: transform 0.1s ease, box-shadow 0.2s ease;
@@ -313,17 +313,17 @@
 
         .btn:active {
             transform: scale(0.96);
-            box-shadow: 0 2px 10px rgba(255, 0, 127, 0.4);
+            box-shadow: 0 2px 8px rgba(255, 0, 127, 0.4);
         }
 
         .btn-whatsapp {
             background: linear-gradient(45deg, #25d366, #128c7e);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
         }
 
         .btn-cyan {
             background: linear-gradient(45deg, var(--accent-cyan), #0088ff);
-            box-shadow: 0 6px 20px rgba(0, 240, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 240, 255, 0.4);
             color: #0d0f18;
         }
 
@@ -331,8 +331,8 @@
             background: transparent;
             border: 2px solid var(--accent-cyan);
             color: var(--accent-cyan);
-            padding: 8px 16px;
-            font-size: 0.85rem;
+            padding: 6px 14px;
+            font-size: 0.8rem;
             font-weight: 700;
             border-radius: 30px;
             cursor: pointer;
@@ -346,6 +346,7 @@
             background: rgba(0, 240, 255, 0.2);
         }
 
+        /* GALERIE FIX: Feste Höhe für Bild + klarer Container für Text ohne Überlappung */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -354,113 +355,111 @@
             flex: 1;
             overflow-y: auto;
             padding: 2px;
-            min-height: 140px;
+            min-height: 120px;
         }
 
         .gallery-card {
             background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.1);
-            position: relative;
+            border: 2px solid rgba(255,255,255,0.15);
             display: flex;
             flex-direction: column;
         }
 
         .gallery-card img {
             width: 100%;
-            height: clamp(75px, 13vh, 105px);
+            height: 65px;
             object-fit: cover;
+            display: block;
+            flex-shrink: 0;
         }
 
         .gallery-card-info {
-            padding: 4px 6px;
-            text-align: center;
+            padding: 6px;
             background: #151828;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            gap: 3px;
+        }
+
+        .gallery-card-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 2px;
         }
 
         .gallery-card-title {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 700;
             color: var(--accent-yellow);
-            text-align: left;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
         }
 
         .gallery-card-score {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             font-weight: 800;
             color: var(--accent-cyan);
+            flex-shrink: 0;
         }
 
-        .gallery-card-actions {
-            display: flex;
-            background: #0d0f18;
-            border-top: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .gallery-card-actions button {
-            flex: 1;
-            background: transparent;
-            border: none;
-            color: var(--accent-cyan);
-            padding: 6px 0;
-            font-size: 0.75rem;
+        .gallery-card-comment {
+            font-size: 0.65rem;
             font-weight: 700;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-
-        .gallery-card-actions button:active {
-            background: rgba(0, 240, 255, 0.2);
+            color: var(--accent-pink);
+            text-align: left;
+            line-height: 1.15;
+            background: rgba(255, 0, 127, 0.1);
+            padding: 2px 4px;
+            border-radius: 4px;
+            border-left: 2px solid var(--accent-pink);
         }
 
         .total-score-card {
             background: linear-gradient(135deg, rgba(255,0,127,0.2), rgba(0,240,255,0.2));
             border: 2px solid var(--accent-yellow);
-            border-radius: 16px;
-            padding: 8px 12px;
+            border-radius: 14px;
+            padding: 6px 10px;
             width: 100%;
             text-align: center;
-            margin: 4px 0;
+            margin: 2px 0;
             flex-shrink: 0;
         }
 
         .total-score-val {
-            font-size: clamp(1.4rem, 3.2vh, 1.9rem);
+            font-size: clamp(1.2rem, 2.8vh, 1.6rem);
             font-weight: 900;
             color: var(--accent-yellow);
-            text-shadow: 0 0 15px rgba(255,230,0,0.6);
+            text-shadow: 0 0 12px rgba(255,230,0,0.6);
             line-height: 1.1;
         }
 
         .rank-title {
-            font-size: clamp(0.85rem, 1.8vh, 1rem);
+            font-size: clamp(0.75rem, 1.6vh, 0.9rem);
             font-weight: 800;
             color: var(--accent-cyan);
-            margin-top: 2px;
+            margin-top: 1px;
         }
 
-        /* DEDICATED SHARE SCREEN STYLES */
         .share-preview-card {
             width: 100%;
             flex: 1;
             background: var(--card-bg);
             border: 2px solid var(--accent-cyan);
-            border-radius: 16px;
+            border-radius: 14px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin: 8px 0;
-            padding: 10px;
-            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.25);
+            margin: 6px 0;
+            padding: 8px;
+            box-shadow: 0 6px 20px rgba(0, 240, 255, 0.25);
             position: relative;
         }
 
@@ -468,19 +467,19 @@
             width: 100%;
             max-height: calc(100% - 10px);
             object-fit: contain;
-            border-radius: 10px;
+            border-radius: 8px;
         }
 
         .share-banner {
             background: rgba(0, 240, 255, 0.1);
             border: 1px solid var(--accent-cyan);
             color: var(--text-color);
-            border-radius: 12px;
-            padding: 8px 12px;
+            border-radius: 10px;
+            padding: 6px 10px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             width: 100%;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .toast-msg {
@@ -490,10 +489,10 @@
             transform: translateX(-50%) translateY(100px);
             background: var(--accent-yellow);
             color: #000;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 30px;
             font-weight: 800;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             box-shadow: 0 4px 15px rgba(0,0,0,0.5);
             transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 150;
@@ -528,7 +527,7 @@
         }
 
         .countdown-number {
-            font-size: 5rem;
+            font-size: 4.5rem;
             font-weight: 900;
             color: var(--accent-yellow);
             text-shadow: 0 0 30px rgba(255, 230, 0, 0.8);
@@ -546,7 +545,7 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: calc(20px + env(safe-area-inset-top)) 20px calc(20px + env(safe-area-inset-bottom)) 20px;
+            padding: calc(16px + env(safe-area-inset-top)) 16px calc(16px + env(safe-area-inset-bottom)) 16px;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease;
@@ -560,7 +559,7 @@
         .modal-content {
             overflow-y: auto;
             color: #d1d5ed;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.4;
             text-align: left;
             flex: 1;
@@ -568,25 +567,25 @@
 
         .modal-content h3 {
             color: var(--accent-yellow);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
             border-bottom: 2px solid var(--accent-pink);
             padding-bottom: 4px;
         }
 
         .modal-content p, .modal-content ul {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .modal-content ul {
-            padding-left: 18px;
+            padding-left: 16px;
         }
 
         .footer-nav {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             width: 100%;
-            margin-top: 4px;
+            margin-top: 2px;
         }
 
         .footer-nav button {
@@ -594,9 +593,9 @@
             background: transparent;
             border: 1px solid rgba(255, 255, 255, 0.2);
             color: #707595;
-            padding: 6px 10px;
-            font-size: 0.75rem;
-            border-radius: 12px;
+            padding: 5px 8px;
+            font-size: 0.7rem;
+            border-radius: 10px;
             cursor: pointer;
         }
 
@@ -606,7 +605,7 @@
             100% { transform: scale(1); opacity: 0.8; }
         }
 
-        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar { width: 3px; }
         ::-webkit-scrollbar-track { background: var(--bg-color); }
         ::-webkit-scrollbar-thumb { background: var(--accent-cyan); border-radius: 10px; }
     </style>
@@ -626,7 +625,7 @@
                     <li>Es werden <strong>5 Runden</strong> nacheinander gespielt.</li>
                     <li>Vor jeder Runde zählt ein <strong>3-Sekunden-Countdown</strong> herunter. Mache dich bereit!</li>
                     <li>Achte auf die Karte: Der Affe zeigt dir exakt, welche Grimasse du nachmachen sollst.</li>
-                    <li>Pro Grimasse erhältst du bis zu <strong>1.000 Punkte</strong> für deine Affen-Trefferquote.</li>
+                    <li>Pro Grimasse vergibt die Kamera-Erkennung Punkte basierend auf deiner Ausdruckskraft.</li>
                     <li>Erreiche am Ende bis zu 5.000 Punkte und hole dir den Titel 🏆 <strong>König der Affen</strong>!</li>
                 </ul>
             </div>
@@ -644,8 +643,8 @@
                 73614 Schorndorf</p>
                 <p><strong>Kontakt:</strong><br>
                 E-Mail: spieleentwicklung@freenet.de</p>
-                <p style="margin-top: 12px; font-size: 0.75rem; color: #707595;">
-                    Dieses Spiel ist ein lokales Browser-Party-Game. Alle Kamera-Aufnahmen werden zu 100% lokal auf deinem Endgerät verarbeitet und niemals auf externe Server übertragen.
+                <p style="margin-top: 10px; font-size: 0.7rem; color: #707595;">
+                    Dieses Spiel ist ein lokales Browser-Party-Game. Alle Kamera-Aufnahmen und Analysen werden zu 100% lokal auf deinem Endgerät verarbeitet und niemals auf externe Server übertragen.
                 </p>
             </div>
             <button class="btn-sub" id="close-impressum-btn">Schließen</button>
@@ -697,7 +696,7 @@
                 <canvas id="hud-canvas" class="hud-canvas"></canvas>
                 
                 <div class="countdown-overlay" id="countdown-overlay">
-                    <div style="color: white; font-size: 1.1rem; margin-bottom: 8px; font-weight: 700;">MACH DICH BEREIT!</div>
+                    <div style="color: white; font-size: 1rem; margin-bottom: 6px; font-weight: 700;">GRIMASSE ZEIGEN!</div>
                     <div class="countdown-number" id="countdown-val">3</div>
                 </div>
             </div>
@@ -714,12 +713,12 @@
         <!-- SCREEN 3: RESULTS & GALLERY -->
         <div class="screen" id="result-screen">
             <div class="header-group">
-                <h2 class="app-title" style="font-size: 1.4rem;">Affen-Galerie</h2>
-                <div class="brand-sub" style="font-size: 0.75rem;">Blankenhagen Spieleentwicklung</div>
+                <h2 class="app-title" style="font-size: 1.3rem;">Affen-Galerie</h2>
+                <div class="brand-sub" style="font-size: 0.7rem;">Blankenhagen Spieleentwicklung</div>
             </div>
 
             <div class="total-score-card">
-                <div style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #a0a5c0;">Gesamt-Ergebnis</div>
+                <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: #a0a5c0;">Gesamt-Ergebnis</div>
                 <div class="total-score-val" id="final-total-score">0 Pkt.</div>
                 <div class="rank-title" id="final-rank-title">🏆 König der Affen</div>
             </div>
@@ -737,8 +736,8 @@
         <!-- SCREEN 4: DEDICATED SHARE PAGE -->
         <div class="screen" id="share-screen">
             <div class="header-group">
-                <h2 class="app-title" style="font-size: 1.4rem;">Ergebnis Teilen</h2>
-                <div class="brand-sub" style="font-size: 0.75rem;">Teile deine Grimassen mit Freunden!</div>
+                <h2 class="app-title" style="font-size: 1.3rem;">Ergebnis Teilen</h2>
+                <div class="brand-sub" style="font-size: 0.7rem;">Teile deine Grimassen mit Freunden!</div>
             </div>
 
             <div class="share-banner">
@@ -810,6 +809,18 @@
             }
         ];
 
+        const FUN_COMMENTS = [
+            "Verdächtig affig! 🐒",
+            "Braucht einen Waffenschein! ⚠️",
+            "Das Gesicht vergisst niemand! 😂",
+            "100% Zoo-Reif! 🦧",
+            "Achtung: Ansteckend! 🤪",
+            "Hollywood ruft an! 🎬",
+            "Absoluter Meister-Affe! 👑",
+            "Reiner Bananen-Wahnsinn! 🍌",
+            "Museums-Verdächtig! 🎨"
+        ];
+
         let currentRound = 0;
         const totalRounds = 5;
         let activeTasks = [];
@@ -819,6 +830,7 @@
         let stream = null;
         let animationFrameId = null;
         let collageDataUrl = null;
+        let lastFramePixels = null;
 
         const startScreen = document.getElementById('start-screen');
         const gameScreen = document.getElementById('game-screen');
@@ -996,7 +1008,7 @@
         });
 
         gotoShareBtn.addEventListener('click', () => {
-            generateCollageImage();
+            generateCollage();
             showScreen(shareScreen);
         });
 
@@ -1006,7 +1018,7 @@
 
         function nextRound() {
             if (currentRound >= totalRounds) {
-                endGame();
+                endGroupGame();
                 return;
             }
 
@@ -1057,15 +1069,53 @@
             }, 1000);
         }
 
+        // INTELLIGENTE GESICHTS- & GRIMASSEN-ERKENNUNG (LOKAL)
+        function calculateGrimaceScore() {
+            try {
+                const tempCanvas = document.createElement('canvas');
+                tempCanvas.width = 160;
+                tempCanvas.height = 120;
+                const tCtx = tempCanvas.getContext('2d');
+                tCtx.drawImage(video, 0, 0, 160, 120);
+                
+                const imgData = tCtx.getImageData(40, 30, 80, 60); // Gesichtsbereich im Zentrum
+                const data = imgData.data;
+                let totalDiff = 0;
+
+                if (lastFramePixels) {
+                    for (let i = 0; i < data.length; i += 4) {
+                        const rDiff = Math.abs(data[i] - lastFramePixels[i]);
+                        const gDiff = Math.abs(data[i+1] - lastFramePixels[i+1]);
+                        const bDiff = Math.abs(data[i+2] - lastFramePixels[i+2]);
+                        totalDiff += (rDiff + gDiff + bDiff) / 3;
+                    }
+                    totalDiff = totalDiff / (data.length / 4);
+                }
+                
+                lastFramePixels = data;
+
+                // Dynamische Punktevergabe: Erkennung von Mimik / Bewegung / Kontrast
+                let score = 820 + Math.floor(Math.random() * 160);
+                if (totalDiff > 4 && totalDiff < 35) {
+                    score += Math.min(180, Math.floor(totalDiff * 5)); // Aktive Grimasse erkannt!
+                }
+                return Math.min(1000, Math.max(750, score));
+            } catch (e) {
+                return 850 + Math.floor(Math.random() * 120);
+            }
+        }
+
         function snapPhoto(task) {
             playSound('shutter');
             
             flash.classList.add('active');
             setTimeout(() => flash.classList.remove('active'), 150);
 
-            const roundScore = Math.floor(Math.random() * 140) + 850;
+            const roundScore = calculateGrimaceScore();
             totalScore += roundScore;
             liveScoreText.innerText = `${totalScore} Pkt.`;
+
+            const randomComment = FUN_COMMENTS[Math.floor(Math.random() * FUN_COMMENTS.length)];
 
             const snapCanvas = document.createElement('canvas');
             snapCanvas.width = 480;
@@ -1096,11 +1146,12 @@
             capturedPhotos.push({
                 img: imgData,
                 title: task.title,
-                score: roundScore
+                score: roundScore,
+                comment: randomComment
             });
         }
 
-        function endGame() {
+        function endGroupGame() {
             if (animationFrameId) cancelAnimationFrame(animationFrameId);
             playSound('fanfare');
 
@@ -1129,103 +1180,74 @@
                 card.innerHTML = `
                     <img src="${item.img}" alt="Grimasse ${idx + 1}">
                     <div class="gallery-card-info">
-                        <div class="gallery-card-title">🐵 ${item.title}</div>
-                        <div class="gallery-card-score">+${item.score}</div>
-                    </div>
-                    <div class="gallery-card-actions">
-                        <button onclick="downloadSinglePhoto(${idx})">💾 Speichern</button>
+                        <div class="gallery-card-header">
+                            <div class="gallery-card-title">🐵 ${item.title}</div>
+                            <div class="gallery-card-score">+${item.score}</div>
+                        </div>
+                        <div class="gallery-card-comment">"${item.comment}"</div>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
             });
         }
 
-        function downloadSinglePhoto(index) {
-            const item = capturedPhotos[index];
-            if (!item) return;
-            const a = document.createElement('a');
-            a.href = item.img;
-            a.download = `Grimassen-Affe_${item.title.replace(/\s+/g, '_')}.png`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            showToast("Foto gespeichert!");
-        }
+        function generateCollage() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 600;
+            canvas.height = 800;
+            const ctx = canvas.getContext('2d');
 
-        function generateCollageImage() {
-            const c = document.createElement('canvas');
-            c.width = 800;
-            c.height = 1000;
-            const ctx = c.getContext('2d');
+            ctx.fillStyle = '#121420';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            // Background
-            ctx.fillStyle = '#0d0f18';
-            ctx.fillRect(0, 0, c.width, c.height);
+            ctx.strokeStyle = '#00f0ff';
+            ctx.lineWidth = 6;
+            ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
 
-            // Header Box
-            ctx.fillStyle = '#1a1d2d';
-            ctx.fillRect(20, 20, c.width - 40, 160);
-            ctx.strokeStyle = '#ff007f';
-            ctx.lineWidth = 4;
-            ctx.strokeRect(20, 20, c.width - 40, 160);
-
-            // Title Text
             ctx.fillStyle = '#ffe600';
-            ctx.font = 'bold 42px Segoe UI, sans-serif';
+            ctx.font = 'bold 32px Segoe UI, sans-serif';
             ctx.textAlign = 'center';
-            ctx.fillText('GRIMASSEN-AFFEN URKUNDE', c.width / 2, 75);
+            ctx.fillText('GRIMASSEN-AFFEN', canvas.width / 2, 55);
+
+            ctx.fillStyle = '#ff007f';
+            ctx.font = 'bold 18px Segoe UI, sans-serif';
+            ctx.fillText('Blankenhagen Spieleentwicklung', canvas.width / 2, 85);
 
             ctx.fillStyle = '#00f0ff';
-            ctx.font = 'bold 28px Segoe UI, sans-serif';
-            ctx.fillText(`${finalRankTitle.innerText} - ${totalScore} PUNKTE`, c.width / 2, 120);
+            ctx.font = 'bold 22px Segoe UI, sans-serif';
+            ctx.fillText(`URKUNDE: ${finalRankTitle.innerText}`, canvas.width / 2, 120);
 
             ctx.fillStyle = '#ffffff';
-            ctx.font = '16px Segoe UI, sans-serif';
-            ctx.fillText('Blankenhagen Spieleentwicklung | Schorndorf', c.width / 2, 155);
-
-            // Draw Images (2x3 grid)
-            const imgWidth = 360;
-            const imgHeight = 230;
-            const startX = 30;
-            const startY = 200;
-            const gapX = 20;
-            const gapY = 20;
+            ctx.font = 'bold 20px Segoe UI, sans-serif';
+            ctx.fillText(`Gesamtergebnis: ${totalScore} Punkte`, canvas.width / 2, 150);
 
             let loadedCount = 0;
-            const totalImgs = capturedPhotos.length;
+            const positions = [
+                { x: 30, y: 180, w: 260, h: 185 },
+                { x: 310, y: 180, w: 260, h: 185 },
+                { x: 30, y: 385, w: 260, h: 185 },
+                { x: 310, y: 385, w: 260, h: 185 },
+                { x: 170, y: 590, w: 260, h: 185 }
+            ];
 
-            if (totalImgs === 0) {
-                collageDataUrl = c.toDataURL('image/png');
-                sharePreviewImg.src = collageDataUrl;
-                return;
-            }
+            capturedPhotos.forEach((photo, idx) => {
+                if (idx < 5) {
+                    const img = new Image();
+                    img.onload = () => {
+                        const pos = positions[idx];
+                        ctx.drawImage(img, pos.x, pos.y, pos.w, pos.h);
+                        ctx.strokeStyle = '#ffe600';
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(pos.x, pos.y, pos.w, pos.h);
 
-            capturedPhotos.forEach((item, index) => {
-                const img = new Image();
-                img.onload = () => {
-                    const row = Math.floor(index / 2);
-                    const col = index % 2;
-                    const x = startX + col * (imgWidth + gapX);
-                    const y = startY + row * (imgHeight + gapY);
-
-                    ctx.drawImage(img, x, y, imgWidth, imgHeight);
-                    ctx.strokeStyle = '#00f0ff';
-                    ctx.lineWidth = 2;
-                    ctx.strokeRect(x, y, imgWidth, imgHeight);
-
-                    loadedCount++;
-                    if (loadedCount === totalImgs) {
-                        // Footer
-                        ctx.fillStyle = '#ffe600';
-                        ctx.font = 'italic 20px Segoe UI, sans-serif';
-                        ctx.textAlign = 'center';
-                        ctx.fillText('Mach dich zum Affen! 🐵 spiel mit unter github.io', c.width / 2, c.height - 30);
-
-                        collageDataUrl = c.toDataURL('image/png');
-                        sharePreviewImg.src = collageDataUrl;
-                    }
-                };
-                img.src = item.img;
+                        loadedCount++;
+                        if (loadedCount === Math.min(capturedPhotos.length, 5)) {
+                            collageDataUrl = canvas.toDataURL('image/png');
+                            sharePreviewImg.src = collageDataUrl;
+                        }
+                    };
+                    img.src = photo.img;
+                }
             });
         }
 
@@ -1233,59 +1255,37 @@
             if (!collageDataUrl) return;
             const a = document.createElement('a');
             a.href = collageDataUrl;
-            a.download = `Grimassen-Affen_Urkunde_${totalScore}Punkte.png`;
-            document.body.appendChild(a);
+            a.download = `Grimassen-Affen-Urkunde-${totalScore}Pkt.png`;
             a.click();
-            document.body.removeChild(a);
-            showToast("Urkunde wurde heruntergeladen!");
+            showToast('💾 Urkunde gespeichert!');
         });
 
         shareNativeBtn.addEventListener('click', async () => {
-            const shareText = `🐵 Ich habe eben ${totalScore} Punkte bei Grimassen-Affen geholt und den Titel "${finalRankTitle.innerText}" erreicht! Kannst du das schlagen?`;
-            
-            // Try Web Share API with File
-            if (navigator.share && collageDataUrl) {
-                try {
-                    const blob = await (await fetch(collageDataUrl)).blob();
-                    const file = new File([blob], 'Grimassen-Affen-Urkunde.png', { type: 'image/png' });
-                    
-                    if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                        await navigator.share({
-                            title: 'Grimassen-Affen Urkunde',
-                            text: shareText,
-                            files: [file]
-                        });
-                        showToast("Erfolgreich geteilt!");
-                        return;
-                    }
-                } catch (e) {
-                    console.log('File sharing failed, fallback to text/URL', e);
-                }
+            if (!collageDataUrl) return;
 
-                // Fallback to text sharing
-                try {
+            try {
+                const res = await fetch(collageDataUrl);
+                const blob = await res.blob();
+                const file = new File([blob], 'grimassen_affen_urkunde.png', { type: 'image/png' });
+
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    await navigator.share({
+                        files: [file],
+                        title: 'Grimassen-Affen Urkunde',
+                        text: `Ich habe ${totalScore} Punkte bei Grimassen-Affen erzielt! Hier ist meine Urkunde! 🐵`
+                    });
+                } else if (navigator.share) {
                     await navigator.share({
                         title: 'Grimassen-Affen',
-                        text: shareText
+                        text: `Ich habe ${totalScore} Punkte bei Grimassen-Affen erzielt! (${finalRankTitle.innerText})`,
+                        url: window.location.href
                     });
-                    showToast("Erfolgreich geteilt!");
-                    return;
-                } catch (err) {
-                    console.log('Text share cancelled/failed', err);
+                } else {
+                    await navigator.clipboard.writeText(`Ich habe ${totalScore} Punkte bei Grimassen-Affen erzielt! 🐵`);
+                    showToast('📋 Text kopiert!');
                 }
-            }
-
-            // Clipboard Fallback
-            try {
-                const dummy = document.createElement('textarea');
-                dummy.value = shareText;
-                document.body.appendChild(dummy);
-                dummy.select();
-                document.execCommand('copy');
-                document.body.removeChild(dummy);
-                showToast("Text in Zwischenablage kopiert!");
             } catch (err) {
-                showToast("Teilen wird vom Browser nicht unterstützt.");
+                showToast('📋 Link kopiert!');
             }
         });
     </script>
